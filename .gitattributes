@@ -1,0 +1,25 @@
+# Automatically normalize line endings
+* text=auto
+
+# Treat shell scripts and similar as LF only
+*.sh text eol=lf
+*.js text
+*.ts text
+*.jsx text
+*.tsx text
+*.html text
+*.css text
+*.json text
+*.md text
+*.yml text
+*.yaml text
+
+# Exclude binary files from line-ending normalization
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.zip binary
+

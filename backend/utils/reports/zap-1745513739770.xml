@@ -1,0 +1,1452 @@
+<?xml version="1.0"?>
+<OWASPZAPReport programName="ZAP" version="2.16.1" generated="Thu, 24 Apr 2025 22:26:42">
+	
+		<site name="http://zero.webappsecurity.com" host="zero.webappsecurity.com" port="80" ssl="false">
+			<alerts>
+				
+					<alertitem>
+						<pluginid>10038</pluginid>
+						<alertRef>10038-1</alertRef>
+						<alert>Content Security Policy (CSP) Header Not Set</alert>
+						<name>Content Security Policy (CSP) Header Not Set</name>
+						<riskcode>2</riskcode>
+						<confidence>3</confidence>
+						<riskdesc>Medium (High)</riskdesc>
+						<confidencedesc>High</confidencedesc>
+						<desc>&lt;p&gt;Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page &#x2014; covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/index.html</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/robots.txt</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/search.html?searchTerm=ZAP</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/sitemap.xml</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+						</instances>
+						<count>5</count>
+						<solution>&lt;p&gt;Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header.&lt;/p&gt;</solution>
+						<otherinfo></otherinfo>
+						<reference>&lt;p&gt;https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy&lt;/p&gt;&lt;p&gt;https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html&lt;/p&gt;&lt;p&gt;https://www.w3.org/TR/CSP/&lt;/p&gt;&lt;p&gt;https://w3c.github.io/webappsec-csp/&lt;/p&gt;&lt;p&gt;https://web.dev/articles/csp&lt;/p&gt;&lt;p&gt;https://caniuse.com/#feat=contentsecuritypolicy&lt;/p&gt;&lt;p&gt;https://content-security-policy.com/&lt;/p&gt;</reference>
+						<cweid>693</cweid>
+						<wascid>15</wascid>
+						<sourceid>8</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>10098</pluginid>
+						<alertRef>10098</alertRef>
+						<alert>Cross-Domain Misconfiguration</alert>
+						<name>Cross-Domain Misconfiguration</name>
+						<riskcode>2</riskcode>
+						<confidence>2</confidence>
+						<riskdesc>Medium (Medium)</riskdesc>
+						<confidencedesc>Medium</confidencedesc>
+						<desc>&lt;p&gt;Web browser data loading may be possible, due to a Cross Origin Resource Sharing (CORS) misconfiguration on the web server.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Access-Control-Allow-Origin: *</evidence>
+									<otherinfo>The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/index.html</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Access-Control-Allow-Origin: *</evidence>
+									<otherinfo>The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/css/bootstrap.min.css</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Access-Control-Allow-Origin: *</evidence>
+									<otherinfo>The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/css/font-awesome.css</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Access-Control-Allow-Origin: *</evidence>
+									<otherinfo>The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/css/main.css</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Access-Control-Allow-Origin: *</evidence>
+									<otherinfo>The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/img/main_carousel_1.jpg</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Access-Control-Allow-Origin: *</evidence>
+									<otherinfo>The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/img/main_carousel_2.jpg</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Access-Control-Allow-Origin: *</evidence>
+									<otherinfo>The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/img/main_carousel_3.jpg</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Access-Control-Allow-Origin: *</evidence>
+									<otherinfo>The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/js/bootstrap.min.js</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Access-Control-Allow-Origin: *</evidence>
+									<otherinfo>The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/js/jquery-1.8.2.min.js</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Access-Control-Allow-Origin: *</evidence>
+									<otherinfo>The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/js/placeholders.min.js</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Access-Control-Allow-Origin: *</evidence>
+									<otherinfo>The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/robots.txt</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Access-Control-Allow-Origin: *</evidence>
+									<otherinfo>The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/search.html?searchTerm=ZAP</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Access-Control-Allow-Origin: *</evidence>
+									<otherinfo>The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/sitemap.xml</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Access-Control-Allow-Origin: *</evidence>
+									<otherinfo>The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.</otherinfo>
+								</instance>
+							
+						</instances>
+						<count>14</count>
+						<solution>&lt;p&gt;Ensure that sensitive data is not available in an unauthenticated manner (using IP address white-listing, for instance).&lt;/p&gt;&lt;p&gt;Configure the &quot;Access-Control-Allow-Origin&quot; HTTP header to a more restrictive set of domains, or remove all CORS headers entirely, to allow the web browser to enforce the Same Origin Policy (SOP) in a more restrictive manner.&lt;/p&gt;</solution>
+						<otherinfo>&lt;p&gt;The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.&lt;/p&gt;</otherinfo>
+						<reference>&lt;p&gt;https://vulncat.fortify.com/en/detail?id=desc.config.dotnet.html5_overly_permissive_cors_policy&lt;/p&gt;</reference>
+						<cweid>264</cweid>
+						<wascid>14</wascid>
+						<sourceid>8</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>40035</pluginid>
+						<alertRef>40035</alertRef>
+						<alert>Hidden File Found</alert>
+						<name>Hidden File Found</name>
+						<riskcode>2</riskcode>
+						<confidence>3</confidence>
+						<riskdesc>Medium (High)</riskdesc>
+						<confidencedesc>High</confidencedesc>
+						<desc>&lt;p&gt;A sensitive file was identified as accessible or available. This may leak administrative, configuration, or credential information which can be leveraged by a malicious individual to further attack the system or conduct social engineering efforts.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/server-status</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>HTTP/1.1 200 OK</evidence>
+									<otherinfo>apache_server_status</otherinfo>
+								</instance>
+							
+						</instances>
+						<count>1</count>
+						<solution>&lt;p&gt;Consider whether or not the component is actually required in production, if it isn&apos;t then disable it. If it is then ensure access to it requires appropriate authentication and authorization, or limit exposure to internal systems or specific source IPs, etc.&lt;/p&gt;</solution>
+						<otherinfo>&lt;p&gt;apache_server_status&lt;/p&gt;</otherinfo>
+						<reference>&lt;p&gt;https://blog.hboeck.de/archives/892-Introducing-Snallygaster-a-Tool-to-Scan-for-Secrets-on-Web-Servers.html&lt;/p&gt;&lt;p&gt;https://httpd.apache.org/docs/current/mod/mod_status.html&lt;/p&gt;</reference>
+						<cweid>538</cweid>
+						<wascid>13</wascid>
+						<sourceid>80</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>10020</pluginid>
+						<alertRef>10020-1</alertRef>
+						<alert>Missing Anti-clickjacking Header</alert>
+						<name>Missing Anti-clickjacking Header</name>
+						<riskcode>2</riskcode>
+						<confidence>2</confidence>
+						<riskdesc>Medium (Medium)</riskdesc>
+						<confidencedesc>Medium</confidencedesc>
+						<desc>&lt;p&gt;The response does not protect against &apos;ClickJacking&apos; attacks. It should include either Content-Security-Policy with &apos;frame-ancestors&apos; directive or X-Frame-Options.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/</uri>
+									<method>GET</method>
+									<param>x-frame-options</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/index.html</uri>
+									<method>GET</method>
+									<param>x-frame-options</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/search.html?searchTerm=ZAP</uri>
+									<method>GET</method>
+									<param>x-frame-options</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+						</instances>
+						<count>3</count>
+						<solution>&lt;p&gt;Modern Web browsers support the Content-Security-Policy and X-Frame-Options HTTP headers. Ensure one of them is set on all web pages returned by your site/app.&lt;/p&gt;&lt;p&gt;If you expect the page to be framed only by pages on your server (e.g. it&apos;s part of a FRAMESET) then you&apos;ll want to use SAMEORIGIN, otherwise if you never expect the page to be framed, you should use DENY. Alternatively consider implementing Content Security Policy&apos;s &quot;frame-ancestors&quot; directive.&lt;/p&gt;</solution>
+						<otherinfo></otherinfo>
+						<reference>&lt;p&gt;https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options&lt;/p&gt;</reference>
+						<cweid>1021</cweid>
+						<wascid>15</wascid>
+						<sourceid>1</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>10003</pluginid>
+						<alertRef>10003</alertRef>
+						<alert>Vulnerable JS Library</alert>
+						<name>Vulnerable JS Library</name>
+						<riskcode>2</riskcode>
+						<confidence>2</confidence>
+						<riskdesc>Medium (Medium)</riskdesc>
+						<confidencedesc>Medium</confidencedesc>
+						<desc>&lt;p&gt;The identified library appears to be vulnerable.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/js/jquery-1.8.2.min.js</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>jquery-1.8.2.min.js</evidence>
+									<otherinfo>The identified library jquery, version 1.8.2 is vulnerable.
+CVE-2020-11023
+CVE-2020-11022
+CVE-2015-9251
+CVE-2019-11358
+CVE-2020-7656
+CVE-2012-6708
+https://nvd.nist.gov/vuln/detail/CVE-2012-6708
+https://github.com/jquery/jquery/issues/2432
+http://research.insecurelabs.org/jquery/test/
+https://nvd.nist.gov/vuln/detail/CVE-2019-11358
+https://github.com/advisories/GHSA-rmxg-73gg-4p98
+https://bugs.jquery.com/ticket/11974
+https://github.com/jquery/jquery.com/issues/162
+https://nvd.nist.gov/vuln/detail/CVE-2020-7656
+http://blog.jquery.com/2016/01/08/jquery-2-2-and-1-12-released/
+http://bugs.jquery.com/ticket/11290
+https://research.insecurelabs.org/jquery/test/
+https://blog.jquery.com/2019/04/10/jquery-3-4-0-released/
+https://nvd.nist.gov/vuln/detail/CVE-2015-9251
+https://github.com/advisories/GHSA-q4m3-2j7h-f7xw
+https://github.com/jquery/jquery/commit/753d591aea698e57d6db58c9f722cd0808619b1b
+https://blog.jquery.com/2020/04/10/jquery-3-5-0-released/
+</otherinfo>
+								</instance>
+							
+						</instances>
+						<count>1</count>
+						<solution>&lt;p&gt;Upgrade to the latest version of the affected library.&lt;/p&gt;</solution>
+						<otherinfo>&lt;p&gt;The identified library jquery, version 1.8.2 is vulnerable.&lt;/p&gt;&lt;p&gt;CVE-2020-11023&lt;/p&gt;&lt;p&gt;CVE-2020-11022&lt;/p&gt;&lt;p&gt;CVE-2015-9251&lt;/p&gt;&lt;p&gt;CVE-2019-11358&lt;/p&gt;&lt;p&gt;CVE-2020-7656&lt;/p&gt;&lt;p&gt;CVE-2012-6708&lt;/p&gt;&lt;p&gt;https://nvd.nist.gov/vuln/detail/CVE-2012-6708&lt;/p&gt;&lt;p&gt;https://github.com/jquery/jquery/issues/2432&lt;/p&gt;&lt;p&gt;http://research.insecurelabs.org/jquery/test/&lt;/p&gt;&lt;p&gt;https://nvd.nist.gov/vuln/detail/CVE-2019-11358&lt;/p&gt;&lt;p&gt;https://github.com/advisories/GHSA-rmxg-73gg-4p98&lt;/p&gt;&lt;p&gt;https://bugs.jquery.com/ticket/11974&lt;/p&gt;&lt;p&gt;https://github.com/jquery/jquery.com/issues/162&lt;/p&gt;&lt;p&gt;https://nvd.nist.gov/vuln/detail/CVE-2020-7656&lt;/p&gt;&lt;p&gt;http://blog.jquery.com/2016/01/08/jquery-2-2-and-1-12-released/&lt;/p&gt;&lt;p&gt;http://bugs.jquery.com/ticket/11290&lt;/p&gt;&lt;p&gt;https://research.insecurelabs.org/jquery/test/&lt;/p&gt;&lt;p&gt;https://blog.jquery.com/2019/04/10/jquery-3-4-0-released/&lt;/p&gt;&lt;p&gt;https://nvd.nist.gov/vuln/detail/CVE-2015-9251&lt;/p&gt;&lt;p&gt;https://github.com/advisories/GHSA-q4m3-2j7h-f7xw&lt;/p&gt;&lt;p&gt;https://github.com/jquery/jquery/commit/753d591aea698e57d6db58c9f722cd0808619b1b&lt;/p&gt;&lt;p&gt;https://blog.jquery.com/2020/04/10/jquery-3-5-0-released/&lt;/p&gt;&lt;p&gt;&lt;/p&gt;</otherinfo>
+						<reference>&lt;p&gt;https://owasp.org/Top10/A06_2021-Vulnerable_and_Outdated_Components/&lt;/p&gt;</reference>
+						<cweid>1395</cweid>
+						<wascid>-1</wascid>
+						<sourceid>29</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>10036</pluginid>
+						<alertRef>10036</alertRef>
+						<alert>Server Leaks Version Information via &quot;Server&quot; HTTP Response Header Field</alert>
+						<name>Server Leaks Version Information via &quot;Server&quot; HTTP Response Header Field</name>
+						<riskcode>1</riskcode>
+						<confidence>3</confidence>
+						<riskdesc>Low (High)</riskdesc>
+						<confidencedesc>High</confidencedesc>
+						<desc>&lt;p&gt;The web/application server is leaking version information via the &quot;Server&quot; HTTP response header. Access to such information may facilitate attackers identifying other vulnerabilities your web/application server is subject to.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Apache-Coyote/1.1</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/index.html</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Apache-Coyote/1.1</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/css/bootstrap.min.css</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Apache-Coyote/1.1</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/css/font-awesome.css</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Apache-Coyote/1.1</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/css/main.css</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Apache-Coyote/1.1</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/img/main_carousel_1.jpg</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Apache-Coyote/1.1</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/img/main_carousel_2.jpg</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Apache-Coyote/1.1</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/img/main_carousel_3.jpg</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Apache-Coyote/1.1</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/js/bootstrap.min.js</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Apache-Coyote/1.1</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/js/jquery-1.8.2.min.js</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Apache-Coyote/1.1</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/js/placeholders.min.js</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Apache-Coyote/1.1</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/robots.txt</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Apache-Coyote/1.1</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/search.html?searchTerm=ZAP</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Apache-Coyote/1.1</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/sitemap.xml</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Apache-Coyote/1.1</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+						</instances>
+						<count>14</count>
+						<solution>&lt;p&gt;Ensure that your web server, application server, load balancer, etc. is configured to suppress the &quot;Server&quot; header or provide generic details.&lt;/p&gt;</solution>
+						<otherinfo></otherinfo>
+						<reference>&lt;p&gt;https://httpd.apache.org/docs/current/mod/core.html#servertokens&lt;/p&gt;&lt;p&gt;https://learn.microsoft.com/en-us/previous-versions/msp-n-p/ff648552(v=pandp.10)&lt;/p&gt;&lt;p&gt;https://www.troyhunt.com/shhh-dont-let-your-response-headers/&lt;/p&gt;</reference>
+						<cweid>497</cweid>
+						<wascid>13</wascid>
+						<sourceid>1</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>10021</pluginid>
+						<alertRef>10021</alertRef>
+						<alert>X-Content-Type-Options Header Missing</alert>
+						<name>X-Content-Type-Options Header Missing</name>
+						<riskcode>1</riskcode>
+						<confidence>2</confidence>
+						<riskdesc>Low (Medium)</riskdesc>
+						<confidencedesc>Medium</confidencedesc>
+						<desc>&lt;p&gt;The Anti-MIME-Sniffing header X-Content-Type-Options was not set to &apos;nosniff&apos;. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially causing the response body to be interpreted and displayed as a content type other than the declared content type. Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/</uri>
+									<method>GET</method>
+									<param>x-content-type-options</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
+At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/index.html</uri>
+									<method>GET</method>
+									<param>x-content-type-options</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
+At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/css/bootstrap.min.css</uri>
+									<method>GET</method>
+									<param>x-content-type-options</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
+At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/css/font-awesome.css</uri>
+									<method>GET</method>
+									<param>x-content-type-options</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
+At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/css/main.css</uri>
+									<method>GET</method>
+									<param>x-content-type-options</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
+At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/img/main_carousel_1.jpg</uri>
+									<method>GET</method>
+									<param>x-content-type-options</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
+At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/img/main_carousel_2.jpg</uri>
+									<method>GET</method>
+									<param>x-content-type-options</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
+At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/img/main_carousel_3.jpg</uri>
+									<method>GET</method>
+									<param>x-content-type-options</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
+At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/js/bootstrap.min.js</uri>
+									<method>GET</method>
+									<param>x-content-type-options</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
+At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/js/jquery-1.8.2.min.js</uri>
+									<method>GET</method>
+									<param>x-content-type-options</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
+At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/js/placeholders.min.js</uri>
+									<method>GET</method>
+									<param>x-content-type-options</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
+At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/search.html?searchTerm=ZAP</uri>
+									<method>GET</method>
+									<param>x-content-type-options</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
+At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</otherinfo>
+								</instance>
+							
+						</instances>
+						<count>12</count>
+						<solution>&lt;p&gt;Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to &apos;nosniff&apos; for all web pages.&lt;/p&gt;&lt;p&gt;If possible, ensure that the end user uses a standards-compliant and modern web browser that does not perform MIME-sniffing at all, or that can be directed by the web application/web server to not perform MIME-sniffing.&lt;/p&gt;</solution>
+						<otherinfo>&lt;p&gt;This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.&lt;/p&gt;&lt;p&gt;At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.&lt;/p&gt;</otherinfo>
+						<reference>&lt;p&gt;https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/gg622941(v=vs.85)&lt;/p&gt;&lt;p&gt;https://owasp.org/www-community/Security_Headers&lt;/p&gt;</reference>
+						<cweid>693</cweid>
+						<wascid>15</wascid>
+						<sourceid>1</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>10094</pluginid>
+						<alertRef>10094-3</alertRef>
+						<alert>Base64 Disclosure</alert>
+						<name>Base64 Disclosure</name>
+						<riskcode>0</riskcode>
+						<confidence>2</confidence>
+						<riskdesc>Informational (Medium)</riskdesc>
+						<confidencedesc>Medium</confidencedesc>
+						<desc>&lt;p&gt;Base64 encoded data was disclosed by the application/web server. Note: in the interests of performance not all base64 strings in the response were analyzed individually, the entire response should be looked at by the analyst/security team/developer(s).&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/js/jquery-1.8.2.min.js</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>D27CDB6E-AE6D-11cf-96B8-444553540000</evidence>
+									<otherinfo>n&#xfffd;&#xfffd;&#xfffd;:&#xfffd;uq&#xfffd;&#xfffd;&#xfffd;&gt;&#xfffd;9&#xfffd;~x&#xfffd;M4</otherinfo>
+								</instance>
+							
+						</instances>
+						<count>1</count>
+						<solution>&lt;p&gt;Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.&lt;/p&gt;</solution>
+						<otherinfo>&lt;p&gt;\x000fn&#xfffd;\x000c\x001e&#xfffd;&#xfffd;\x0001:\x000f&#xfffd;uq&#xfffd;&#xfffd;&#xfffd;\x001f&gt;&#xfffd;9&#xfffd;~x&#xfffd;M4&lt;/p&gt;</otherinfo>
+						<reference>&lt;p&gt;https://projects.webappsec.org/w/page/13246936/Information%20Leakage&lt;/p&gt;</reference>
+						<cweid>319</cweid>
+						<wascid>13</wascid>
+						<sourceid>29</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>10027</pluginid>
+						<alertRef>10027</alertRef>
+						<alert>Information Disclosure - Suspicious Comments</alert>
+						<name>Information Disclosure - Suspicious Comments</name>
+						<riskcode>0</riskcode>
+						<confidence>1</confidence>
+						<riskdesc>Informational (Low)</riskdesc>
+						<confidencedesc>Low</confidencedesc>
+						<desc>&lt;p&gt;The response appears to contain suspicious comments which may help an attacker.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/js/jquery-1.8.2.min.js</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>username</evidence>
+									<otherinfo>The following pattern was used: \bUSERNAME\b and was detected in likely comment: &quot;//,cq=/\?/,cr=/&lt;script\b[^&lt;]*(?:(?!&lt;\/script&gt;)&lt;[^&lt;]*)*&lt;\/script&gt;/gi,cs=/([?&amp;])_=[^&amp;]*/,ct=/^([\w\+\.\-]+:)(?:\/\/([^\/?#:]*)(?::&quot;, see evidence field for the suspicious comment/snippet.</otherinfo>
+								</instance>
+							
+						</instances>
+						<count>1</count>
+						<solution>&lt;p&gt;Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.&lt;/p&gt;</solution>
+						<otherinfo>&lt;p&gt;The following pattern was used: \bUSERNAME\b and was detected in likely comment: &quot;//,cq=/\?/,cr=/&lt;script\b[^&lt;]*(?:(?!&lt;\/script&gt;)&lt;[^&lt;]*)*&lt;\/script&gt;/gi,cs=/([?&amp;])_=[^&amp;]*/,ct=/^([\w\+\.\-]+:)(?:\/\/([^\/?#:]*)(?::&quot;, see evidence field for the suspicious comment/snippet.&lt;/p&gt;</otherinfo>
+						<reference></reference>
+						<cweid>615</cweid>
+						<wascid>13</wascid>
+						<sourceid>29</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>10109</pluginid>
+						<alertRef>10109</alertRef>
+						<alert>Modern Web Application</alert>
+						<name>Modern Web Application</name>
+						<riskcode>0</riskcode>
+						<confidence>2</confidence>
+						<riskdesc>Informational (Medium)</riskdesc>
+						<confidencedesc>Medium</confidencedesc>
+						<desc>&lt;p&gt;The application appears to be a modern web application. If you need to explore it automatically then the Ajax Spider may well be more effective than the standard one.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>&lt;a id=&quot;online-banking&quot; class=&quot;btn btn-small btn-info&quot;&gt;More Services&lt;/a&gt;</evidence>
+									<otherinfo>Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/index.html</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>&lt;a id=&quot;online-banking&quot; class=&quot;btn btn-small btn-info&quot;&gt;More Services&lt;/a&gt;</evidence>
+									<otherinfo>Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application.</otherinfo>
+								</instance>
+							
+						</instances>
+						<count>2</count>
+						<solution>&lt;p&gt;This is an informational alert and so no changes are required.&lt;/p&gt;</solution>
+						<otherinfo>&lt;p&gt;Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application.&lt;/p&gt;</otherinfo>
+						<reference></reference>
+						<cweid>-1</cweid>
+						<wascid>-1</wascid>
+						<sourceid>8</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>90005</pluginid>
+						<alertRef>90005-3</alertRef>
+						<alert>Sec-Fetch-Dest Header is Missing</alert>
+						<name>Sec-Fetch-Dest Header is Missing</name>
+						<riskcode>0</riskcode>
+						<confidence>3</confidence>
+						<riskdesc>Informational (High)</riskdesc>
+						<confidencedesc>High</confidencedesc>
+						<desc>&lt;p&gt;Specifies how and where the data would be used. For instance, if the value is audio, then the requested resource must be audio data and not any other type of resource.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-Dest</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/index.html</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-Dest</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/css/bootstrap.min.css</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-Dest</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/css/font-awesome.css</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-Dest</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/css/main.css</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-Dest</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/img/main_carousel_1.jpg</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-Dest</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/img/main_carousel_2.jpg</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-Dest</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/img/main_carousel_3.jpg</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-Dest</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/js/bootstrap.min.js</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-Dest</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/js/jquery-1.8.2.min.js</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-Dest</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/js/placeholders.min.js</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-Dest</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/robots.txt</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-Dest</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/search.html?searchTerm=ZAP</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-Dest</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/sitemap.xml</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-Dest</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+						</instances>
+						<count>14</count>
+						<solution>&lt;p&gt;Ensure that Sec-Fetch-Dest header is included in request headers.&lt;/p&gt;</solution>
+						<otherinfo></otherinfo>
+						<reference>&lt;p&gt;https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Dest&lt;/p&gt;</reference>
+						<cweid>352</cweid>
+						<wascid>9</wascid>
+						<sourceid>8</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>90005</pluginid>
+						<alertRef>90005-2</alertRef>
+						<alert>Sec-Fetch-Mode Header is Missing</alert>
+						<name>Sec-Fetch-Mode Header is Missing</name>
+						<riskcode>0</riskcode>
+						<confidence>3</confidence>
+						<riskdesc>Informational (High)</riskdesc>
+						<confidencedesc>High</confidencedesc>
+						<desc>&lt;p&gt;Allows to differentiate between requests for navigating between HTML pages and requests for loading resources like images, audio etc.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-Mode</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/index.html</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-Mode</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/css/bootstrap.min.css</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-Mode</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/css/font-awesome.css</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-Mode</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/css/main.css</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-Mode</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/img/main_carousel_1.jpg</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-Mode</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/img/main_carousel_2.jpg</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-Mode</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/img/main_carousel_3.jpg</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-Mode</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/js/bootstrap.min.js</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-Mode</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/js/jquery-1.8.2.min.js</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-Mode</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/js/placeholders.min.js</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-Mode</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/robots.txt</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-Mode</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/search.html?searchTerm=ZAP</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-Mode</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/sitemap.xml</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-Mode</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+						</instances>
+						<count>14</count>
+						<solution>&lt;p&gt;Ensure that Sec-Fetch-Mode header is included in request headers.&lt;/p&gt;</solution>
+						<otherinfo></otherinfo>
+						<reference>&lt;p&gt;https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Mode&lt;/p&gt;</reference>
+						<cweid>352</cweid>
+						<wascid>9</wascid>
+						<sourceid>8</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>90005</pluginid>
+						<alertRef>90005-1</alertRef>
+						<alert>Sec-Fetch-Site Header is Missing</alert>
+						<name>Sec-Fetch-Site Header is Missing</name>
+						<riskcode>0</riskcode>
+						<confidence>3</confidence>
+						<riskdesc>Informational (High)</riskdesc>
+						<confidencedesc>High</confidencedesc>
+						<desc>&lt;p&gt;Specifies the relationship between request initiator&apos;s origin and target&apos;s origin.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-Site</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/index.html</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-Site</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/css/bootstrap.min.css</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-Site</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/css/font-awesome.css</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-Site</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/css/main.css</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-Site</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/img/main_carousel_1.jpg</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-Site</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/img/main_carousel_2.jpg</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-Site</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/img/main_carousel_3.jpg</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-Site</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/js/bootstrap.min.js</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-Site</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/js/jquery-1.8.2.min.js</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-Site</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/js/placeholders.min.js</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-Site</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/robots.txt</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-Site</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/search.html?searchTerm=ZAP</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-Site</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/sitemap.xml</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-Site</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+						</instances>
+						<count>14</count>
+						<solution>&lt;p&gt;Ensure that Sec-Fetch-Site header is included in request headers.&lt;/p&gt;</solution>
+						<otherinfo></otherinfo>
+						<reference>&lt;p&gt;https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Site&lt;/p&gt;</reference>
+						<cweid>352</cweid>
+						<wascid>9</wascid>
+						<sourceid>8</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>90005</pluginid>
+						<alertRef>90005-4</alertRef>
+						<alert>Sec-Fetch-User Header is Missing</alert>
+						<name>Sec-Fetch-User Header is Missing</name>
+						<riskcode>0</riskcode>
+						<confidence>3</confidence>
+						<riskdesc>Informational (High)</riskdesc>
+						<confidencedesc>High</confidencedesc>
+						<desc>&lt;p&gt;Specifies if a navigation request was initiated by a user.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-User</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/index.html</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-User</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/css/bootstrap.min.css</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-User</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/css/font-awesome.css</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-User</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/css/main.css</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-User</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/img/main_carousel_1.jpg</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-User</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/img/main_carousel_2.jpg</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-User</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/img/main_carousel_3.jpg</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-User</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/js/bootstrap.min.js</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-User</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/js/jquery-1.8.2.min.js</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-User</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/resources/js/placeholders.min.js</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-User</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/robots.txt</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-User</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/search.html?searchTerm=ZAP</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-User</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://zero.webappsecurity.com/sitemap.xml</uri>
+									<method>GET</method>
+									<param>Sec-Fetch-User</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+						</instances>
+						<count>14</count>
+						<solution>&lt;p&gt;Ensure that Sec-Fetch-User header is included in user initiated requests.&lt;/p&gt;</solution>
+						<otherinfo></otherinfo>
+						<reference>&lt;p&gt;https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-User&lt;/p&gt;</reference>
+						<cweid>352</cweid>
+						<wascid>9</wascid>
+						<sourceid>8</sourceid>
+					</alertitem>
+				
+			</alerts>
+		</site>
+	
+</OWASPZAPReport>
