@@ -1,0 +1,4 @@
+The primary objective of this project is to develop a React and Node.js-based Web Application Security Scanner that detects and reports security vulnerabilities in web applications. The system will integrate multiple scanning tools and provide a user-friendly dashboard for real-time monitoring and detailed reports.
+Owasp zap is used in this project for scanning and Tech stack that is used is MERN stack. Here are some screenshots of the project:- 
+
+
